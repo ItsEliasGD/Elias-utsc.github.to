@@ -1,7 +1,125 @@
-<!DOCTYPE html>
-<html>
-    <head></head>
-    <body>
-        <h1>HOLA MUNDO</h1>
-    </body>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perfil Profesional — Elías Rafael Martínez Flores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071023 0%, #071422 100%);}
+    .container{max-width:900px;margin:36px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:white;box-shadow:0 6px 20px rgba(6,182,212,0.12)}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .section-title{font-weight:600;margin-bottom:10px;color:#dbeafe}
+    ul.skills{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+    ul.skills li{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .meta{font-size:14px;color:var(--muted)}
+    .experience{display:flex;flex-direction:column;gap:12px}
+    .job{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+    .job h4{margin:0;font-size:15px}
+    .job .date{font-size:13px;color:var(--muted)}
+    .projects{display:flex;flex-direction:column;gap:10px}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:86px;height:86px;font-size:22px}}
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="avatar">EM</div>
+      <div>
+        <h1>Elías Rafael Martínez Flores</h1>
+        <p class="lead">Desarrollador Web Full‑Stack — Construyo aplicaciones web modernas, escalables y centradas en la experiencia del usuario.</p>
+        <p class="meta">📍 Monterrey, México · ✉️ elias@example.com · 💼 LinkedIn / GitHub</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <section class="card" aria-labelledby="resumen">
+          <h2 id="resumen" class="section-title">Resumen profesional</h2>
+          <p>Desarrollador web con experiencia en proyectos front‑end y back‑end. Fuertes habilidades en diseño de interfaces responsivas, consumo y diseño de APIs REST/GraphQL, optimización de rendimiento y buenas prácticas de testing y despliegue continuo. Capacidad para trabajar tanto en startups como en equipos establecidos, orientado a resultados y mejora continua.</p>
+        </section>
+
+        <section class="card" aria-labelledby="experiencia" style="margin-top:16px">
+          <h2 id="experiencia" class="section-title">Experiencia</h2>
+          <div class="experience">
+            <div class="job">
+              <h4>Desarrollador Web — Aplicación SaaS (Proyecto ficticio)</h4>
+              <div class="date">2022 — Presente</div>
+              <p class="meta">Desarrollo de funcionalidades end‑to‑end: diseño de UI, integración con APIs, autenticación y autorización, despliegues en la nube y supervisión del rendimiento.</p>
+            </div>
+
+            <div class="job">
+              <h4>Ingeniero Front‑end — Agencia digital (Proyecto ficticio)</h4>
+              <div class="date">2020 — 2022</div>
+              <p class="meta">Implementación de interfaces accesibles y responsivas, migraciones a frameworks modernos, optimización para SEO y mejoras de accesibilidad.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="proyectos" style="margin-top:16px">
+          <h2 id="proyectos" class="section-title">Proyectos destacados</h2>
+          <div class="projects">
+            <div>
+              <strong>Panel de ventas</strong> — Panel administrativo para gestión de inventario y ventas con filtros avanzados, reportes y exportación CSV.
+            </div>
+            <div>
+              <strong>Landing interactiva</strong> — Landing optimizada para conversión con animaciones ligeras y pruebas A/B.
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="educacion" style="margin-top:16px">
+          <h2 id="educacion" class="section-title">Educación</h2>
+          <p class="meta"><strong>Ingeniería en Sistemas / Informática</strong> — Universidad (2015 — 2019)</p>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card" aria-labelledby="habilidades">
+          <h2 id="habilidades" class="section-title">Habilidades</h2>
+          <ul class="skills">
+            <li>HTML5 &amp; CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>TypeScript</li>
+            <li>React / Vue / Svelte</li>
+            <li>Node.js &amp; .NET (C#)</li>
+            <li>APIs REST / GraphQL</li>
+            <li>SQL / NoSQL</li>
+            <li>Git &amp; CI/CD</li>
+            <li>Testing (Jest, Playwright)</li>
+            <li>Docker &amp; Cloud</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="tools" style="margin-top:16px">
+          <h2 id="tools" class="section-title">Herramientas</h2>
+          <p class="meta">VS Code · Postman · Figma · Docker · Azure / AWS · GitHub Actions · Linux</p>
+        </section>
+
+        <section class="card" aria-labelledby="idiomas" style="margin-top:16px">
+          <h2 id="idiomas" class="section-title">Idiomas</h2>
+          <p class="meta">Español (nativo) · Inglés (intermedio‑alto)</p>
+        </section>
+
+        <section class="card" aria-labelledby="contacto" style="margin-top:16px">
+          <h2 id="contacto" class="section-title">Contacto</h2>
+          <p class="meta">Email: <a href="mailto:elias@example.com">elias@example.com</a></p>
+          <p class="meta">GitHub: github.com/elias · LinkedIn: linkedin.com/in/elias</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <small>Perfil profesional generado automáticamente. Ajusta experiencias y fechas según tu historial real.</small>
+    </footer>
+  </main>
+</body>
 </html>
